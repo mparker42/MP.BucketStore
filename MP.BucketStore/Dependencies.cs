@@ -8,7 +8,7 @@ namespace MP.BucketStore
 {
     public static class Dependencies
     {
-        public static IServiceCollection AddBucket<T>(IServiceCollection services, IConfiguration configuration) where T : class
+        public static IServiceCollection AddBucket<T>(this IServiceCollection services, IConfiguration configuration) where T : class
         {
             var bucketConfigSection = configuration.GetSection($"Bucket:{typeof(T).Name}");
 
