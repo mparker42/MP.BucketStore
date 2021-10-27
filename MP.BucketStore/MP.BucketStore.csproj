@@ -7,6 +7,10 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>mparker42</Authors>
     <Description>An abstraction layer for blob/bucket stores to allow for easy service switching and unit testing without widescale code refactors.</Description>
+    <PackageProjectUrl>https://github.com/mparker42/MP.BucketStore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mparker42/MP.BucketStore</RepositoryUrl>
+    <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
+    <Copyright>Martin Parker</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
