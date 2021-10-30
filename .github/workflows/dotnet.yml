@@ -20,7 +20,7 @@ jobs:
         include-prerelease: true
     - name: Build
       run: dotnet build --configuration Release
-    - name: Pack -p:PackageVersion=1.0.${{ github.run_number }}
-      run: dotnet pack --configuration Release
+    - name: Pack
+      run: dotnet pack --configuration Release -p:PackageVersion=1.0.${{ github.run_number }}
     - name: Publish
       run: dotnet nuget push */bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{secrets.NUGET_API_KEY}}
