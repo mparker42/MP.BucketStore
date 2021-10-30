@@ -20,4 +20,4 @@ jobs:
     - name: Build and Pack
       run: dotnet build
     - name: Publish
-      run: dotnet nuget push ${{env.githubKey}}
+      run: dotnet nuget push ${{secrets.NUGET_API_KEY}}
