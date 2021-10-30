@@ -12,7 +12,15 @@
     <PackageLicenseExpression>MIT-0</PackageLicenseExpression>
     <Copyright>Martin Parker</Copyright>
     <Version>1.0.1</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.S3" Version="3.7.3.19" />
