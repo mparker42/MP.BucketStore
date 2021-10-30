@@ -17,7 +17,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 6.0.x
-    - name: Build and Pack
-      run: dotnet build
+        include-prerelease: true
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.NUGET_API_KEY}}
+    - name: Build
+      run: dotnet build --configuration Release
+    - name: Pack
+      run: dotnet pack --configuration Release
     - name: Publish
-      run: dotnet nuget push ${{secrets.NUGET_API_KEY}}
+      run: dotnet nuget push */bin/Release/*.nupkg
